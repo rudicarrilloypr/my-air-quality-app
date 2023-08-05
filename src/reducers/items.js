@@ -5,6 +5,9 @@ import {
   FETCH_ITEMS_SUCCESS,
   FETCH_ITEMS_FAILURE,
   APPLY_FILTER,
+  FETCH_COORDINATES_REQUEST,
+  FETCH_COORDINATES_SUCCESS,
+  FETCH_COORDINATES_FAILURE,
 } from '../actions';
 
 const initialState = {
@@ -13,12 +16,19 @@ const initialState = {
   items: [],
   error: null,
   filter: '',
+  coordinates: null,
 };
 
 const itemsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ITEMS_REQUEST:
       return { ...state, loading: true };
+    case FETCH_COORDINATES_REQUEST:
+      return { ...state, loading: true };
+    case FETCH_COORDINATES_SUCCESS:
+      return { ...state, loading: false, coordinates: action.payload };
+    case FETCH_COORDINATES_FAILURE:
+      return { ...state, loading: false, error: action.payload };
     case FETCH_ITEMS_SUCCESS:
       return {
         ...state,

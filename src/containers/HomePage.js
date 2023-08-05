@@ -1,94 +1,54 @@
-// src/containers/HomePage.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchItems } from '../actions';
+import { fetchItems, fetchCoordinates } from '../actions';
 import HomePageComponent from '../components/HomePage';
 
 const HomePage = ({
-  fetchItems, items, loading, error,
+  fetchItems, fetchCoordinates, items, loading, error, coordinates,
 }) => {
-  const [manualLocation, setManualLocation] = useState(false);
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-
-  const handleFetchItems = () => {
-    if (latitude && longitude) {
-      fetchItems(parseFloat(latitude), parseFloat(longitude));
-    }
-  };
-
-  const handleGeoError = () => {
-    setManualLocation(true);
-  };
-
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => fetchItems(position.coords.latitude, position.coords.longitude),
-        handleGeoError,
+        (position) => fetchCoordinates(position.coords.latitude, position.coords.longitude),
+        // Removemos la función setManualLocation ya que ya no la usaremos
       );
-    } else {
-      setManualLocation(true);
     }
-  }, [fetchItems]);
+  }, [fetchCoordinates]);
 
-  if (manualLocation) {
-    return (
-      <div>
-        <label htmlFor="latitude">
-          Latitud:
-          <input
-            id="latitude"
-            type="number"
-            onChange={(e) => setLatitude(e.target.value)}
-          />
-        </label>
-        <label htmlFor="longitude">
-          Longitud:
-          <input
-            id="longitude"
-            type="number"
-            onChange={(e) => setLongitude(e.target.value)}
-          />
-        </label>
-        <button type="button" onClick={handleFetchItems}>
-          Obtener datos
-        </button>
-        <HomePageComponent items={items} loading={loading} error={error} />
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (coordinates) {
+      fetchItems(coordinates.lat, coordinates.lon);
+    }
+  }, [coordinates, fetchItems]);
 
   return <HomePageComponent items={items} loading={loading} error={error} />;
 };
 
-// Define las validaciones de las props
 HomePage.propTypes = {
   fetchItems: PropTypes.func.isRequired,
-  // Define la forma exacta del objeto esperado
-  items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    // otros campos según sea necesario
-  })).isRequired,
+  fetchCoordinates: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
+  coordinates: PropTypes.shape({ lat: PropTypes.number, lon: PropTypes.number }),
 };
 
-// Define los valores predeterminados para las props no requeridas
 HomePage.defaultProps = {
   error: null,
+  coordinates: null,
 };
 
 const mapStateToProps = (state) => ({
   items: state.items.items,
   loading: state.items.loading,
   error: state.items.error,
+  coordinates: state.items.coordinates,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   fetchItems: (lat, lon) => dispatch(fetchItems(lat, lon)),
+  fetchCoordinates: (lat, lon) => dispatch(fetchCoordinates(lat, lon)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
