@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+   <img src="./src/assets/rc-softdev-banner-doodles-soft.PNG" alt="Rudi Carrillo logo" height="auto" />
+  <br/>
 
-## Available Scripts
+  <h3><b> ☁️ My Air Quality Mx App 🇲🇽 </b></h3>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📗 Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [📖  My Air Quality Mx App](#--fornite-)
+- [🛠 Built With ](#-built-with-)
+   - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+- [🚀 Live Demo](#live-demo)
+  - [💻 Getting Started ](#-getting-started-)
+   - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+- [👥 Authors ](#-authors-)
+- [🔮 Future Features](#-future-features)
+- [🤝 Contributing ](#-contributing-)
+- [⭐️ Show your support ](#️-show-your-support-)
+- [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+- [📝 License ](#-license-)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- PROJECT DESCRIPTION -->
 
-### `npm run build`
+# 📖  My Air Quality Mx App <a name="about-project"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**My Air Quality Mx App** mobile web application to check aprovides Mexico's current air pollution data for any coordinates on the globe.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with"></a>
+- React APP
+- Redux
+- Open Weather API
+### Tech Stack <a name="tech-stack"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</details>
 
-### `npm run eject`
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="#">Local Storage</a></li>
+  </ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Features -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
+- [X] **Use of React to setup de project.**
+- [X] **Recieve API info into Quote section.**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- LIVE DEMO -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### Code Splitting
+[Click here]() to see the project's deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- GETTING STARTED -->
 
-### Making a Progressive Web App
+## 💻 Getting Started <a name="getting-started"></a>
+To get a local copy up and running, follow these steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
+Before you proceed, ensure that you have the following installed on your machine:
+- Node.js (v12 or above)
+- npm (Node Package Manager)
 
-### Advanced Configuration
+### Setup
+Clone this repository to your desired folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+  git clone git@github.com:rudicarrilloypr/my-air-quality-app.git
+```
 
-### Deployment
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install the project dependencies with:
 
-### `npm run build` fails to minify
+```sh
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run build
+```
+
+### Run tests
+
+To run tests, run the following command:
+```sh
+  npm start
+```
+- Open your web browser and visit http://localhost:8080.
+- You should now see My Air Quality Mx application running in your browser.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Rudi Carrillo**
+
+- GitHub: [@rudicarrilloypr](https://github.com/rudicarrilloypr)
+- Twitter: [@__rudicarrillo](https://twitter.com/__rudicarrillo)
+- LinkedIn: [Rudi Carrillo](https://www.linkedin.com/in/rudi-carrillo/)
+- Instagram: [@__rudicarrillo](https://www.instagram.com/_rudicarrillo/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--- Future Features ---->
+
+## <a href="#future-features"></a>🔮 Future Features
+- style updates
+- desktop version
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions are welcome! If you find any bugs or want to enhance the project with new features, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make the necessary changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request describing your changes.
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please consider supporting us! Your support helps us to continue developing and improving our project for everyone to enjoy. Whether it's a small donation, sharing the project with your friends, or contributing your skills and expertise, every little bit makes a huge difference. With your support, we can create something truly amazing together. Thank you for being a part of our community and helping us to make a difference!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ -->
+
+## ❓ FAQ <a name="faq"></a>
+- **How do I set up the project?**
+
+  - Clone the repository from GitHub, and see the [Setup](#setup) section above for details.
+
+- **How can I contribute to the project?**
+
+  1. Fork the repository on GitHub.
+  2. Create a new branch for your changes using git checkout -b my-feature-branch.
+  3. Make your changes and commit them with descriptive commit messages.
+  4. Push your changes to your forked repository.
+  5. Submit a pull request to the original repository.
+  6. Wait for feedback and iterate on your changes as needed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
