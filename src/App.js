@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// src/App.js
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './containers/HomePage';
-import DetailsPage from './containers/DetailsPage';
+import DetailsPage from './components/DetailsPage';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/details/:id" component={DetailsPage} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/details/:id" element={<DetailsPage />} />
+      </Routes>
     </Router>
   );
 }
