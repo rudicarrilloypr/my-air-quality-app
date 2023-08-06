@@ -9,11 +9,11 @@ import { fetchCoordinates } from '../actions';
 const DetailsPage = ({
   fetchCoordinates, data, loading, error,
 }) => {
-  const { lat, lon } = useParams(); // Aquí usamos lat y lon en lugar de id
+  const { stateName } = useParams();
 
   useEffect(() => {
-    fetchCoordinates(lat, lon);
-  }, [lat, lon, fetchCoordinates]);
+    fetchCoordinates(stateName);
+  }, [stateName, fetchCoordinates]);
 
   // Ahora se puede renderizar la información de la API como se prefiera.
   // Aquí se muestra un ejemplo sencillo, pero se puede hacer mucho más con estos datos

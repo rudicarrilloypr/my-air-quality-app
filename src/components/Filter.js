@@ -1,10 +1,11 @@
+// src/components/Filter.js
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { fetchCoordinates } from '../actions';
+import { fetchCoordinates, selectState } from '../actions';
 
-const Filter = ({ fetchCoordinates }) => {
+const Filter = ({ fetchCoordinates, selectState }) => {
   const statesOfMexico = [
     'Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chihuahua', 'Chiapas', 'Coahuila', 'Colima', 'Durango',
     'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Estado de México', 'Ciudad de México', 'Michoacán', 'Morelos', 'Nayarit',
@@ -13,6 +14,7 @@ const Filter = ({ fetchCoordinates }) => {
   ];
 
   const handleStateChange = (state) => {
+    selectState(state);
     fetchCoordinates(state);
   };
 
@@ -31,10 +33,12 @@ const Filter = ({ fetchCoordinates }) => {
 
 Filter.propTypes = {
   fetchCoordinates: PropTypes.func.isRequired,
+  selectState: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
   fetchCoordinates: (state) => dispatch(fetchCoordinates(state)),
+  selectState: (state) => dispatch(selectState(state)),
 });
 
 export default connect(null, mapDispatchToProps)(Filter);
