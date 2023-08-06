@@ -1,7 +1,7 @@
 // src/components/DetailsPage.js
 
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchCoordinates } from '../actions';
@@ -29,6 +29,9 @@ const DetailsPage = ({
   }
   return (
     <div>
+      <Link to="/">
+        <button type="button">← Back</button>
+      </Link>
       <h1> Air Quality</h1>
       {data.map((item) => (
         <div key={item.dt}>
