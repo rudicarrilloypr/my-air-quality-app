@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FaArrowLeft } from 'react-icons/fa';
 import { fetchCoordinates } from '../actions';
 
 const DetailsPage = ({
@@ -30,7 +31,7 @@ const DetailsPage = ({
   return (
     <div>
       <Link to="/">
-        <button type="button">← Back</button>
+        <FaArrowLeft style={{ fontSize: '1.5em', margin: '10px' }} />
       </Link>
       <h1> Air Quality</h1>
       {data.map((item) => (
