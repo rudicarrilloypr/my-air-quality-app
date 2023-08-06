@@ -29,7 +29,7 @@ const DetailsPage = ({
   }
   return (
     <div>
-      <h1>Calidad del aire</h1>
+      <h1> Air Quality</h1>
       {data.map((item) => (
         <div key={item.dt}>
           <h2>{new Date(item.dt * 1000).toLocaleDateString()}</h2>
@@ -39,9 +39,58 @@ const DetailsPage = ({
             {item.main.aqi}
           </p>
           <p>
-            CO:
+            CO (Monóxido de Carbono):
             {' '}
             {item.components.co}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            NO (Monóxido de Nitrógeno):
+            {' '}
+            {item.components.no}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            NO2 (Dióxido de Nitrógeno):
+            {' '}
+            {item.components.no2}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            O3 (Ozono):
+            {' '}
+            {item.components.o3}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            SO2 (Dióxido de Azufre):
+            {' '}
+            {item.components.so2}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            PM2.5:
+            {' '}
+            {item.components.pm2_5}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            PM10:
+            {' '}
+            {item.components.pm10}
+            {' '}
+            μg/m3
+          </p>
+          <p>
+            NH3 (Amoniaco):
+            {' '}
+            {item.components.nh3}
             {' '}
             μg/m3
           </p>
