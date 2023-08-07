@@ -1,9 +1,10 @@
+// src/components/Filter.js
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FiSettings, FiChevronRight } from 'react-icons/fi'; // <-- Agrega los iconos que necesitas aquí
-import { FaBell } from 'react-icons/fa';
+import { FaBell, FaCloud } from 'react-icons/fa';
 import { fetchCoordinates, selectState } from '../actions';
 import statesImages from '../data/mexico.json';
 import airPurityIcon from '../assets/air-purity.PNG';
@@ -17,13 +18,14 @@ const Filter = ({ fetchCoordinates, selectState }) => {
 
   return (
     <div>
-      <div className="logo-container">
-        <img src={airPurityIcon} alt="Air Purity Logo" className="app-logo" />
-      </div>
-
-      <div className="icon-container">
+      <div className="nav-bar" />
+      <div className="icons-homepage">
+        <FaCloud className="icon" />
         <FaBell className="icon" />
         <FiSettings className="icon" />
+      </div>
+      <div className="logo-container">
+        <img src={airPurityIcon} alt="Air Purity Logo" className="app-logo" />
       </div>
       <div className="states-grid">
         {statesImages.map(({ id, estado, url }) => (
