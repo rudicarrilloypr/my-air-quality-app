@@ -4,27 +4,23 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchCoordinates, selectState } from '../actions';
+import statesImages from '../data/mexico.json';
+import '../styles/filter.css';
 
 const Filter = ({ fetchCoordinates, selectState }) => {
-  const statesOfMexico = [
-    'Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chihuahua', 'Chiapas', 'Coahuila', 'Colima', 'Durango',
-    'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Estado de México', 'Ciudad de México', 'Michoacán', 'Morelos', 'Nayarit',
-    'Nuevo León', 'Oaxaca', 'Puebla', 'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas',
-    'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas',
-  ];
-
   const handleStateChange = (state) => {
     selectState(state);
     fetchCoordinates(state);
   };
 
   return (
-    <div>
-      {statesOfMexico.map((state) => (
-        <Link to={`/details/${state}`} key={state} onClick={() => handleStateChange(state)}>
-          <button type="button">
-            {state}
-          </button>
+    <div className="states-grid">
+      {statesImages.map(({ id, estado, url }) => (
+        <Link to={`/details/${estado}`} key={id} onClick={() => handleStateChange(estado)}>
+          <div className="state-container">
+            <img src={url} alt={estado} className="state-image" />
+            <div className="state-title">{estado}</div>
+          </div>
         </Link>
       ))}
     </div>
