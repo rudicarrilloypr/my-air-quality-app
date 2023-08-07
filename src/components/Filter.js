@@ -18,9 +18,14 @@ const Filter = ({ fetchCoordinates, selectState }) => {
 
   return (
     <div>
+      <FaCloud
+        className="icon"
+        style={{
+          fontSize: '1.5em', margin: '6px', marginTop: '8px', color: 'white',
+        }}
+      />
       <div className="nav-bar" />
       <div className="icons-homepage">
-        <FaCloud className="icon" />
         <FaBell className="icon" />
         <FiSettings className="icon" />
       </div>

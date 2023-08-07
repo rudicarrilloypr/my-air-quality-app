@@ -6,7 +6,7 @@ div {
 }
 
 .nav-bar {
-  height: 65px; /* Ajusta según tus necesidades */
+  height: 30px; /* Ajusta según tus necesidades */
   background-color: #385898; /* O el color que prefieras para la barra de navegación */
   position: relative;
   z-index: 5;
@@ -86,11 +86,6 @@ div {
   top: 10px;  /* Puedes ajustar este valor para mover el logo hacia arriba o hacia abajo */
   right: 3%;
   z-index: 10;/* Agrega espacio entre los iconos */
-}
-
-.icons-homepage .icon:first-child {  /* Esto aplicará el margen solo al primer icono de la lista (FaCloud en este caso) */
-  margin-right: 270px;
-  height: 20px;
 }
 
 /* ------DetailsPage----- */
