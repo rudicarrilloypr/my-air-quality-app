@@ -80,6 +80,9 @@ export const fetchCoordinates = (locationName) => (dispatch) => {
         lon: response.data[0].lon,
       };
       dispatch(fetchCoordinatesSuccess(coordinates));
+      // Aquí es donde se dispara la acción para obtener la calidad del aire
+      // usando las coordenadas recién obtenidas
+      dispatch(fetchItems(coordinates.lat, coordinates.lon));
     })
     .catch((error) => {
       dispatch(fetchCoordinatesFailure(error.message));

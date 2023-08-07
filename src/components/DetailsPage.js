@@ -78,74 +78,76 @@ const DetailsPage = ({
       </div>
       {data.map((item) => (
         <table key={item.dt} className="table air-quality-list">
-          <tr>
-            <th>AQI</th>
-            <td>{item.main.aqi}</td>
-          </tr>
-          <tr>
-            <th>CO</th>
-            <td>
-              {item.components.co}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>NO</th>
-            <td>
-              {item.components.no}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>NO2</th>
-            <td>
-              {item.components.no2}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>O3</th>
-            <td>
-              {item.components.o3}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>SO2</th>
-            <td>
-              {item.components.so2}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>PM2.5</th>
-            <td>
-              {item.components.pm2_5}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>PM10</th>
-            <td>
-              {item.components.pm10}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
-          <tr>
-            <th>NH3</th>
-            <td>
-              {item.components.nh3}
-              {' '}
-              μg/m3
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>AQI</th>
+              <td>{item.main.aqi}</td>
+            </tr>
+            <tr>
+              <th>CO</th>
+              <td>
+                {item.components.co}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>NO</th>
+              <td>
+                {item.components.no}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>NO2</th>
+              <td>
+                {item.components.no2}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>O3</th>
+              <td>
+                {item.components.o3}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>SO2</th>
+              <td>
+                {item.components.so2}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>PM2.5</th>
+              <td>
+                {item.components.pm2_5}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>PM10</th>
+              <td>
+                {item.components.pm10}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+            <tr>
+              <th>NH3</th>
+              <td>
+                {item.components.nh3}
+                {' '}
+                μg/m3
+              </td>
+            </tr>
+          </tbody>
         </table>
       ))}
 
