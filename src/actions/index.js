@@ -13,7 +13,7 @@ export const FETCH_COORDINATES_FAILURE = 'FETCH_COORDINATES_FAILURE';
 export const APPLY_FILTER = 'APPLY_FILTER';
 export const SELECT_STATE = 'SELECT_STATE';
 
-const apiKey = '283367945399f60f0f14ebffe3d3a613'; // Tu clave de API
+const apiKey = '283367945399f60f0f14ebffe3d3a613';
 
 export const selectState = (stateName) => ({
   type: SELECT_STATE,
@@ -74,7 +74,6 @@ export const fetchCoordinates = (locationName) => (dispatch) => {
   axios
     .get(`http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=${apiKey}`)
     .then((response) => {
-      // Obtener la primera ubicación encontrada, ajustar según sea necesario
       const coordinates = {
         lat: response.data[0].lat,
         lon: response.data[0].lon,

@@ -5,7 +5,6 @@ import itemsReducer from './items';
 
 const rootReducer = combineReducers({
   items: itemsReducer,
-  // otros reducers aquí
 });
 
 export default rootReducer;

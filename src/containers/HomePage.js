@@ -12,7 +12,6 @@ const HomePage = ({
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => fetchCoordinates(position.coords.latitude, position.coords.longitude),
-        // Removemos la función setManualLocation ya que ya no la usaremos
       );
     }
   }, [fetchCoordinates]);

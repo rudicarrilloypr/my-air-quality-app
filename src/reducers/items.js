@@ -33,7 +33,6 @@ const itemsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        // Asegúrate de manejar la respuesta correctamente aquí
         items: Array.isArray(action.payload.list) ? action.payload.list : [],
         allItems: Array.isArray(action.payload.list) ? action.payload.list : [],
       };

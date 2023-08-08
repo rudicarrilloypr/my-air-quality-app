@@ -24,7 +24,6 @@ const DetailsPage = ({
 }) => {
   const { stateName } = useParams();
 
-  // Encuentra la información de la imagen basada en el nombre del estado
   const selectedState = statesImages.find((state) => state.estado === stateName);
 
   useEffect(() => {
