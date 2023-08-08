@@ -37,7 +37,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
       <div
         className={isSearchBarVisible ? 'search-bar-visible' : 'search-bar-hidden'}
         style={{
-          display: 'flex', justifyContent: 'left', alignItems: 'center', margin: '10px', marginTop: '20px', position: 'absolute', zIndex: '100',
+          display: 'flex', justifyContent: 'left', alignItems: 'center', margin: '10px', marginTop: '27.9px', position: 'absolute', zIndex: '100',
         }}
       >
         <input
