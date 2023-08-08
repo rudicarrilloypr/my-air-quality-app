@@ -9,6 +9,7 @@ import { FaBell, FaSearch, FaUserFriends } from 'react-icons/fa';
 import { fetchCoordinates, selectState } from '../actions';
 import statesImages from '../data/mexico.json';
 import airPurityIcon from '../assets/air-purity.PNG';
+import bannerImage from '../assets/banner-aquality.PNG';
 import '../styles/filter.css';
 
 const Filter = ({ fetchCoordinates, selectState }) => {
@@ -25,9 +26,9 @@ const Filter = ({ fetchCoordinates, selectState }) => {
     const foundState = statesImages.find(({ estado }) => estado.toLowerCase().includes(searchText.toLowerCase()));
 
     if (foundState) {
-      alert(`State Found: ${foundState.estado}`);
+      alert(`State found: ${foundState.estado}, scroll down, and click to see ${foundState.estado} air quality`);
     } else {
-      alert('The State you are looking for it is not found or please double check quotation marks');
+      alert('The State you are looking for it is not on our database or please double check quotation marks');
     }
   };
 
@@ -50,7 +51,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
         <input
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
-          placeholder="Search State"
+          placeholder="what State are you looking for"
           style={{ padding: '5px', borderRadius: '5px' }}
         />
         <button
@@ -73,6 +74,8 @@ const Filter = ({ fetchCoordinates, selectState }) => {
       <div className="logo-container">
         <img src={airPurityIcon} alt="Air Purity Logo" className="app-logo" />
       </div>
+
+      <img src={bannerImage} alt="Aquality Banner" className="banner-image" />
 
       <div className="states-grid">
         {statesImages.map(({
