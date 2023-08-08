@@ -1,3 +1,4 @@
+// src/containers/HomePage.js
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -11,7 +12,6 @@ const HomePage = ({
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => fetchCoordinates(position.coords.latitude, position.coords.longitude),
-        // Removemos la función setManualLocation ya que ya no la usaremos
       );
     }
   }, [fetchCoordinates]);

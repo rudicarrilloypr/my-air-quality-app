@@ -1,10 +1,13 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./src/assets/rc-softdev-banner-doodles-soft.PNG" alt="Rudi Carrillo logo" height="auto" />
+   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="33px" height="auto" />
   <br/>
 
-  <h3><b> ☁️ My Air Quality Mx App 🇲🇽 </b></h3>
+   <img src="./src/assets/banner-apurity-readme.PNG" alt="Rudi Carrillo logo" />
+  <br/>
+
+  <h3><b> Air Purity App  ☁️   </b></h3>
 
 </div>
 
@@ -12,7 +15,7 @@
 
 # 📗 Table of Contents
 
-- [📖  My Air Quality Mx App](#--fornite-)
+- [📖  Air Purity App](#--air-purity-)
 - [🛠 Built With ](#-built-with-)
    - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -24,6 +27,7 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
 - [👥 Authors ](#-authors-)
+- [🙏🏻  Acknowledgements ](#-acknowledgements-)
 - [🔮 Future Features](#-future-features)
 - [🤝 Contributing ](#-contributing-)
 - [⭐️ Show your support ](#️-show-your-support-)
@@ -33,9 +37,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖  My Air Quality Mx App <a name="about-project"></a>
+# 📖  Air Purity App <a name="about-project"></a>
 
-**My Air Quality Mx App** mobile web application to check aprovides Mexico's current air pollution data for any coordinates on the globe.
+**Air Purity Mx** mobile web application to check aprovides Mexico's current air pollution data.
 
 ## 🛠 Built With <a name="built-with"></a>
 - React APP
@@ -68,7 +72,7 @@
 
 ### Key Features <a name="key-features"></a>
 - [X] **Use of React to setup de project.**
-- [X] **Recieve API info into Quote section.**
+- [X] **Recieve API for pollution database.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -140,11 +144,22 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🙏🏻 Acknowledgements <a name="acknowledgements"></a>
+
+I'd like to express my gratitude to everyone who made this project possible.
+
+- Original design idea by **Nelson Sakwa** on **Behance**.
+- Mexico's pictures via **Unsplash**
+
+Thanks again to everyone who believed in this project and helped make it a reality!
+
 <!--- Future Features ---->
 
 ## <a href="#future-features"></a>🔮 Future Features
 - style updates
 - desktop version
+- more information
+- more Data funcions and sections
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
