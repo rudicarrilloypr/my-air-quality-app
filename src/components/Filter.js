@@ -28,6 +28,8 @@ const Filter = ({ fetchCoordinates, selectState }) => {
     <div>
       <FaSearch
         className="icon"
+        role="button"
+        aria-label="search"
         style={{
           fontSize: '1.5em', margin: '6px', marginTop: '8px', color: 'white',
         }}
