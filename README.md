@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="36px" height="auto" />
+   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="38px" height="auto" />
   <br/>
 
    <img src="./src/assets/banner-apurity-readme.PNG" alt="Rudi Carrillo logo" />
@@ -20,7 +20,7 @@
    - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
 - [🚀 Live Demo](#live-demo)
-  - [💻 Getting Started ](#-getting-started-)
+- [💻 Getting Started ](#-getting-started-)
    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
