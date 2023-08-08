@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { FiSettings, FiChevronRight } from 'react-icons/fi';
+import { FiSettings, FiArrowRightCircle } from 'react-icons/fi';
 import { FaBell, FaSearch, FaUserFriends } from 'react-icons/fa';
 import { fetchCoordinates, selectState } from '../actions';
 import statesImages from '../data/mexico.json';
@@ -88,7 +88,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
                 {' '}
               </div>
               <div className="state-arrow">
-                <FiChevronRight color="white" size="20px" />
+                <FiArrowRightCircle color="white" size="20px" />
               </div>
             </div>
           </Link>
