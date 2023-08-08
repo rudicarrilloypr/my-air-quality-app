@@ -126,7 +126,7 @@ To run tests, run the following command:
   npm start
 ```
 - Open your web browser and visit http://localhost:8080.
-- You should now see My Air Quality Mx application running in your browser.
+- You should now see Air Purity application running in your browser.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
