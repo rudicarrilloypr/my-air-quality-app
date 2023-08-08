@@ -69,6 +69,20 @@ div {
   padding: 4px;
 }
 
+.state-population {
+  font-size: 0.66em;  /* Tamaño de subtitulo */
+  color: white;
+  display: inline-flex;
+  bottom: 37.5px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px 10px 0 0;
+  border-width: 10px;
+  padding: 4px 8px;
+  justify-content: flex-end;
+  position: absolute;
+}
+
 .icon-container {
   position: absolute;
   top: 10px;
