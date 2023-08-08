@@ -42,10 +42,10 @@ export const applyFilter = (filter) => ({
 export const fetchItems = (lat, lon) => (dispatch) => {
   if (lat == null || lon == null) {
     dispatch(fetchItemsFailure('Latitud o longitud no definidas.'));
-    return;
+    return Promise.reject(new Error('Latitud o longitud no definidas.'));
   }
   dispatch(fetchItemsRequest());
-  axios
+  return axios
     .get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`)
     .then((response) => {
       dispatch(fetchItemsSuccess(response.data));
@@ -71,7 +71,7 @@ export const fetchCoordinatesFailure = (error) => ({
 
 export const fetchCoordinates = (locationName) => (dispatch) => {
   dispatch(fetchCoordinatesRequest());
-  axios
+  return axios
     .get(`https://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=${apiKey}`)
     .then((response) => {
       const coordinates = {
@@ -81,7 +81,7 @@ export const fetchCoordinates = (locationName) => (dispatch) => {
       dispatch(fetchCoordinatesSuccess(coordinates));
       // Aquí es donde se dispara la acción para obtener la calidad del aire
       // usando las coordenadas recién obtenidas
-      dispatch(fetchItems(coordinates.lat, coordinates.lon));
+      return dispatch(fetchItems(coordinates.lat, coordinates.lon));
     })
     .catch((error) => {
       dispatch(fetchCoordinatesFailure(error.message));

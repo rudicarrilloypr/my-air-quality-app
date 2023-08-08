@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="33px" height="auto" />
+   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="36px" height="auto" />
   <br/>
 
    <img src="./src/assets/banner-apurity-readme.PNG" alt="Rudi Carrillo logo" />
@@ -81,7 +81,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click here]() to see the project's deployment.
+[Click here](https://airpurity-mx.netlify.app/) to see the project's deployment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +126,7 @@ To run tests, run the following command:
   npm start
 ```
 - Open your web browser and visit http://localhost:8080.
-- You should now see My Air Quality Mx application running in your browser.
+- You should now see Air Purity application running in your browser.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
