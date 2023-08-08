@@ -81,7 +81,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click here]() to see the project's deployment.
+[Click here](https://airpurity-mx.netlify.app/) to see the project's deployment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
