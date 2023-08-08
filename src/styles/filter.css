@@ -38,7 +38,7 @@ div {
 .search-bar-visible {
   opacity: 1;
   transform: translateY(0); /* de vuelta a su posición original */
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.6s, transform 0.6s;
   visibility: visible;
 }
 
