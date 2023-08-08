@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+// src/ components/Filter.js
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -23,10 +25,8 @@ const Filter = ({ fetchCoordinates, selectState }) => {
     const foundState = statesImages.find(({ estado }) => estado.toLowerCase().includes(searchText.toLowerCase()));
 
     if (foundState) {
-      // eslint-disable-next-line no-alert
       alert(`State Found: ${foundState.estado}`);
     } else {
-      // eslint-disable-next-line no-alert
       alert('The State you are looking for it is not found or please double check quotation marks');
     }
   };
@@ -41,28 +41,28 @@ const Filter = ({ fetchCoordinates, selectState }) => {
         onClick={() => setSearchBarVisibility(!isSearchBarVisible)}
       />
 
-      {isSearchBarVisible && (
-        <div style={{
+      <div
+        className={isSearchBarVisible ? 'search-bar-visible' : 'search-bar-hidden'}
+        style={{
           display: 'flex', justifyContent: 'left', alignItems: 'center', margin: '10px', marginTop: '3px', position: 'absolute', zIndex: '1',
         }}
+      >
+        <input
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          placeholder="Search State"
+          style={{ padding: '5px', borderRadius: '5px' }}
+        />
+        <button
+          type="button"
+          onClick={handleSearchSubmit}
+          style={{
+            marginLeft: '-151.2px', marginTop: '70px', padding: '5px 10px', justifyContent: 'left',
+          }}
         >
-          <input
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            placeholder="Search State"
-            style={{ padding: '5px', borderRadius: '5px' }}
-          />
-          <button
-            type="button"
-            onClick={handleSearchSubmit}
-            style={{
-              marginLeft: '-151.2px', marginTop: '70px', padding: '5px 10px', justifyContent: 'left',
-            }}
-          >
-            Search
-          </button>
-        </div>
-      )}
+          Search
+        </button>
+      </div>
 
       <div className="nav-bar" />
       <div className="icons-homepage">

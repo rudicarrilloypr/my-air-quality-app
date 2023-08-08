@@ -26,6 +26,22 @@ div {
   margin-top: -73px;
 }
 
+/* Estilo para la barra de búsqueda cuando está escondida */
+.search-bar-hidden {
+  opacity: 0;
+  transform: translateY(-10px); /* pequeño desplazamiento hacia arriba */
+  transition: opacity 0.3s, transform 0.3s;
+  visibility: hidden;
+}
+
+/* Estilo para la barra de búsqueda cuando está visible */
+.search-bar-visible {
+  opacity: 1;
+  transform: translateY(0); /* de vuelta a su posición original */
+  transition: opacity 0.3s, transform 0.3s;
+  visibility: visible;
+}
+
 .states-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
