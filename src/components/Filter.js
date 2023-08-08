@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-alert */
 // src/ components/Filter.js
 import React, { useState } from 'react';
@@ -21,16 +22,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
     fetchCoordinates(state);
   };
 
-  const handleSearchSubmit = () => {
-    // eslint-disable-next-line max-len
-    const foundState = statesImages.find(({ estado }) => estado.toLowerCase().includes(searchText.toLowerCase()));
-
-    if (foundState) {
-      alert(`State found: ${foundState.estado}, scroll down, and click to see ${foundState.estado} air quality`);
-    } else {
-      alert('The State you are looking for it is not on our database or please double check quotation marks');
-    }
-  };
+  const filteredStates = statesImages.filter(({ estado }) => estado.toLowerCase().includes(searchText.toLowerCase()));
 
   return (
     <div>
@@ -45,7 +37,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
       <div
         className={isSearchBarVisible ? 'search-bar-visible' : 'search-bar-hidden'}
         style={{
-          display: 'flex', justifyContent: 'left', alignItems: 'center', margin: '10px', marginTop: '3px', position: 'absolute', zIndex: '1',
+          display: 'flex', justifyContent: 'left', alignItems: 'center', margin: '10px', marginTop: '20px', position: 'absolute', zIndex: '100',
         }}
       >
         <input
@@ -54,15 +46,6 @@ const Filter = ({ fetchCoordinates, selectState }) => {
           placeholder="what State are you looking for"
           style={{ padding: '5px', borderRadius: '5px' }}
         />
-        <button
-          type="button"
-          onClick={handleSearchSubmit}
-          style={{
-            marginLeft: '-151.2px', marginTop: '70px', padding: '5px 10px', justifyContent: 'left',
-          }}
-        >
-          Search
-        </button>
       </div>
 
       <div className="nav-bar" />
@@ -82,7 +65,7 @@ const Filter = ({ fetchCoordinates, selectState }) => {
       </div>
 
       <div className="states-grid">
-        {statesImages.map(({
+        {filteredStates.map(({
           id, estado, url, poblacion,
         }) => (
           <Link to={`/details/${estado}`} key={id} onClick={() => handleStateChange(estado)}>
