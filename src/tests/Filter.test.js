@@ -22,7 +22,6 @@ describe('Filter component', () => {
       </Provider>,
     );
 
-    // Buscar el icono de búsqueda y hacer click
     fireEvent.click(screen.getByRole('button', { name: /search/i }));
 
     const searchBar = screen.getByPlaceholderText(/what State are you looking for/i);

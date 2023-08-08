@@ -4,14 +4,14 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import MockAdapter from 'axios-mock-adapter';
-import axios from 'axios'; // mantenemos esto porque MockAdapter lo necesita
+import axios from 'axios';
 import axiosMock from '../../__mocks__/axiosMock';
 import {
   fetchItems, fetchCoordinates, FETCH_ITEMS_REQUEST, FETCH_ITEMS_SUCCESS, FETCH_COORDINATES_REQUEST,
 } from '../actions';
 
-const mock = new MockAdapter(axios); // utilizamos axios real aquí porque MockAdapter lo necesita
-const middlewares = [thunk.withExtraArgument(axiosMock)]; // aquí pasamos el mock como un argumento extra para thunk
+const mock = new MockAdapter(axios);
+const middlewares = [thunk.withExtraArgument(axiosMock)];
 const mockStore = configureMockStore(middlewares);
 
 describe('async actions', () => {
