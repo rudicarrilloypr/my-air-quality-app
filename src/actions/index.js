@@ -72,7 +72,7 @@ export const fetchCoordinatesFailure = (error) => ({
 export const fetchCoordinates = (locationName) => (dispatch) => {
   dispatch(fetchCoordinatesRequest());
   axios
-    .get(`http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=${apiKey}`)
+    .get(`https://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=${apiKey}`)
     .then((response) => {
       const coordinates = {
         lat: response.data[0].lat,
