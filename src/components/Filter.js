@@ -77,6 +77,10 @@ const Filter = ({ fetchCoordinates, selectState }) => {
 
       <img src={bannerImage} alt="Aquality Banner" className="banner-image" />
 
+      <div className="divider-bar">
+        <span className="divider-text">MÉXICO&apos;s STATES</span>
+      </div>
+
       <div className="states-grid">
         {statesImages.map(({
           id, estado, url, poblacion,

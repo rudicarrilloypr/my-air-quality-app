@@ -125,6 +125,23 @@ div {
   z-index: 10;/* Agrega espacio entre los iconos */
 }
 
+.divider-bar {
+  background-color: #385898; /* Asegúrate de reemplazar [COLOR_DE_FONDO_DE_TU_PÁGINA] con el color de fondo actual de tu página. */
+  height: 2px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.divider-text {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  padding: 0 2px;
+  font-size: 0.9em;
+  color: #f5f5f5;
+  letter-spacing: 0.2px;
+}
+
 /* ------DetailsPage----- */
 .state-details-image-container {
   position: relative;
