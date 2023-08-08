@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="120px" height="auto" />
+   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="33px" height="auto" />
   <br/>
 
    <img src="./src/assets/banner-apurity-readme.PNG" alt="Rudi Carrillo logo" />
