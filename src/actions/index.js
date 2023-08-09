@@ -74,14 +74,16 @@ export const fetchCoordinates = (locationName) => (dispatch) => {
   return axios
     .get(`https://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=${apiKey}`)
     .then((response) => {
-      const coordinates = {
-        lat: response.data[0].lat,
-        lon: response.data[0].lon,
-      };
-      dispatch(fetchCoordinatesSuccess(coordinates));
-      // Aquí es donde se dispara la acción para obtener la calidad del aire
-      // usando las coordenadas recién obtenidas
-      return dispatch(fetchItems(coordinates.lat, coordinates.lon));
+      if (response.data && response.data.length > 0) {
+        const coordinates = {
+          lat: response.data[0].lat,
+          lon: response.data[0].lon,
+        };
+        dispatch(fetchCoordinatesSuccess(coordinates));
+        return dispatch(fetchItems(coordinates.lat, coordinates.lon));
+      }
+      dispatch(fetchCoordinatesFailure('No se encontraron coordenadas'));
+      throw new Error('No se encontraron coordenadas');
     })
     .catch((error) => {
       dispatch(fetchCoordinatesFailure(error.message));
