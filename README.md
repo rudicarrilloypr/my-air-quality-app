@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="36px" height="auto" />
+   <img src="./src/assets/rc-sd-logo.PNG" alt="Rudi Carrillo logo" width="38px" height="auto" />
   <br/>
 
    <img src="./src/assets/banner-apurity-readme.PNG" alt="Rudi Carrillo logo" />
@@ -19,8 +19,9 @@
 - [🛠 Built With ](#-built-with-)
    - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+- [👀 Sneak Peak (Author's App presentation)](#sneak-peak)
 - [🚀 Live Demo](#live-demo)
-  - [💻 Getting Started ](#-getting-started-)
+- [💻 Getting Started ](#-getting-started-)
    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -74,6 +75,14 @@
 - [X] **Use of React to setup de project.**
 - [X] **Recieve API for pollution database.**
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SNEAK PEAK -->
+
+## 👀 Sneak Peak (Author's video presentation) <a name="sneak-peak"></a>
+
+[Sneak Peak 👀](https://www.loom.com/share/7c9db9f3d8214762b3f283bd80194968?sid=46e69e37-85f8-428a-849a-5e919f10ed5c)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
