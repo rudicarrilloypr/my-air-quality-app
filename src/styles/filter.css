@@ -1,0 +1,270 @@
+/* src/styles/filter.css */
+div {
+  position: relative;
+}
+
+.nav-bar {
+  height: 30px;
+  background-color: #385898;
+  position: relative;
+  z-index: 5;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.app-logo {
+  width: 200px;
+  height: auto;
+  margin-top: -73px;
+}
+
+.search-bar-hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  visibility: hidden;
+}
+
+/* Estilo para la barra de búsqueda cuando está visible */
+.search-bar-visible {
+  opacity: 1;
+  transform: translateY(0); /* de vuelta a su posición original */
+  transition: opacity 0.6s, transform 0.6s;
+  visibility: visible;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 1200px; /* ancho máximo de la imagen */
+  height: auto; /* mantiene la proporción */
+  display: block;
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0;
+  padding: 0;
+}
+
+.state-container {
+  position: relative;
+  height: 150px;
+  overflow: hidden; /* Esto asegura que cualquier parte de la imagen que exceda el contenedor no se muestre */
+}
+
+.state-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto hará que la imagen cubra todo el contenedor manteniendo sus proporciones */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.state-image:hover {
+  transform: scale(1.05);
+}
+
+.state-title {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.state-arrow {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.state-population {
+  font-size: 0.66em;  /* Tamaño de subtitulo */
+  color: white;
+  display: inline-flex;
+  bottom: 37.5px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px 10px 0 0;
+  border-width: 10px;
+  padding: 4px 8px;
+  justify-content: flex-end;
+  position: absolute;
+}
+
+.icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.icon {
+  margin-left: 20px;
+  color: #f5f5f5;
+}
+
+.icons-homepage {
+  position: absolute;
+  top: 10px;
+  right: 3%;
+  z-index: 10;
+}
+
+.divider-bar {
+  background-color: #385898;
+  height: 2px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.divider-text {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  padding: 0 2px;
+  font-size: 0.9em;
+  color: #f5f5f5;
+  letter-spacing: 0.2px;
+}
+
+/* ------------      DetailsPage         --------- */
+.state-details-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.state-details-image {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  filter: brightness(50%);
+}
+
+.state-details-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.state-details-title {
+  font-size: 1.5em;
+  text-align: right;
+  margin-bottom: 3px;
+}
+
+.state-details-subtitle {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+.header-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #385898;
+  height: 0.1px;
+  justify-content: space-between;
+}
+
+.state-header {
+  margin-bottom: 0;
+}
+
+.quality-header {
+  margin-top: -12px;
+  color: #f5f5f5;
+  font-size: 1em;
+  text-align: left;
+}
+
+.air-quality-list {
+  align-items: center;
+  text-align: left;
+  color: #f5f5f5;
+  background-color: #191919;
+}
+
+.table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+}
+
+.table td {
+  text-align: right;
+  border: 0.5px  #0c1627;
+  padding: 8px;
+}
+
+.table th {
+  border: 0.5px  #0c1628;
+  padding: 8px;
+  text-align: left;
+  background-color: #1f1e1e;
+  color: rgb(255, 255, 255);
+}
+
+.table tr:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.table td:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.table th:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.quality-indicator {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: -23px;
+}
+
+.clean {
+  background-color: rgb(102, 200, 102);
+}
+
+.intermediate {
+  background-color: rgb(247, 247, 133);
+}
+
+.bad {
+  background-color: rgb(210, 0, 0);
+}
