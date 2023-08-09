@@ -41,7 +41,6 @@ div {
 
 .banner-image {
   width: 100%;
-  max-width: 1200px; /* ancho máximo de la imagen */
   height: auto; /* mantiene la proporción */
   display: block;
 }
