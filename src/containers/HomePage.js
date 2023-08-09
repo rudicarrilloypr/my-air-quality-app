@@ -2,20 +2,12 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchItems, fetchCoordinates } from '../actions';
+import { fetchItems } from '../actions';
 import HomePageComponent from '../components/HomePage';
 
 const HomePage = ({
-  fetchItems, fetchCoordinates, items, loading, error, coordinates,
+  fetchItems, items, loading, error, coordinates,
 }) => {
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => fetchCoordinates(position.coords.latitude, position.coords.longitude),
-      );
-    }
-  }, [fetchCoordinates]);
-
   useEffect(() => {
     if (coordinates) {
       fetchItems(coordinates.lat, coordinates.lon);
@@ -27,7 +19,6 @@ const HomePage = ({
 
 HomePage.propTypes = {
   fetchItems: PropTypes.func.isRequired,
-  fetchCoordinates: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
@@ -48,7 +39,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchItems: (lat, lon) => dispatch(fetchItems(lat, lon)),
-  fetchCoordinates: (lat, lon) => dispatch(fetchCoordinates(lat, lon)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

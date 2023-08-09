@@ -24,7 +24,7 @@ const HomePage = ({
       <Filter fetchCoordinates={fetchCoordinates} selectState={selectState} />
       <ul>
         {Array.isArray(items.list) ? items.list.map((item) => (
-          <li key={item.dt}>{item.dt}</li> // Usamos sólo item.dt como clave
+          <li key={item.dt}>{item.dt}</li>
         )) : null}
       </ul>
     </div>
@@ -32,7 +32,7 @@ const HomePage = ({
 };
 
 HomePage.propTypes = {
-  items: PropTypes.shape({ // Usamos shape para definir la estructura de items
+  items: PropTypes.shape({
     list: PropTypes.arrayOf(PropTypes.shape({
       dt: PropTypes.number.isRequired,
     })).isRequired,
