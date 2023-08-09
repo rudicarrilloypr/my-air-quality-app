@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 // src/components/HomePage.js
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -24,9 +23,8 @@ const HomePage = ({
     <div>
       <Filter fetchCoordinates={fetchCoordinates} selectState={selectState} />
       <ul>
-        {Array.isArray(items.list) ? items.list.map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={`${item.dt}-${index}`}>{item.dt}</li> // Usar una combinación de item.dt y el índice como key
+        {Array.isArray(items.list) ? items.list.map((item) => (
+          <li key={item.dt}>{item.dt}</li> // Usamos sólo item.dt como clave
         )) : null}
       </ul>
     </div>
@@ -34,7 +32,11 @@ const HomePage = ({
 };
 
 HomePage.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  items: PropTypes.shape({ // Usamos shape para definir la estructura de items
+    list: PropTypes.arrayOf(PropTypes.shape({
+      dt: PropTypes.number.isRequired,
+    })).isRequired,
+  }).isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
   fetchCoordinates: PropTypes.func.isRequired,

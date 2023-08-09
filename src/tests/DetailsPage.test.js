@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // src/tests/DetailsPage.test.js
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';

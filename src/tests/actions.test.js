@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // src/tests/actions.test.js
 
 import configureMockStore from 'redux-mock-store';

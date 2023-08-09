@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-alert */
 // src/ components/Filter.js
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
@@ -22,7 +20,8 @@ const Filter = ({ fetchCoordinates, selectState }) => {
     fetchCoordinates(state);
   };
 
-  const filteredStates = statesImages.filter(({ estado }) => estado.toLowerCase().includes(searchText.toLowerCase()));
+  const filteredStates = statesImages.filter(({ estado }) => estado.toLowerCase()
+    . includes(searchText.toLowerCase()));
 
   return (
     <div>

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 // src/components/DetailsPage.js
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
@@ -158,6 +157,9 @@ DetailsPage.propTypes = {
   fetchCoordinates: PropTypes.func.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
     dt: PropTypes.number.isRequired,
+    main: PropTypes.shape({
+      aqi: PropTypes.number.isRequired,
+    }).isRequired,
   })).isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string,

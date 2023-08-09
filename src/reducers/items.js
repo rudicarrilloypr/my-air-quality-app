@@ -19,6 +19,11 @@ const initialState = {
   coordinates: null,
 };
 
+const filterItemsByName = (items, name) => {
+  const lowercasedName = name.toLowerCase();
+  return items.filter((item) => item.name.toLowerCase().includes(lowercasedName));
+};
+
 const itemsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ITEMS_REQUEST:
@@ -44,9 +49,7 @@ const itemsReducer = (state = initialState, action) => {
       return {
         ...state,
         filter: action.payload,
-        // Aquí utilizamos allItems en lugar de initialState.items
-        // eslint-disable-next-line max-len
-        items: state.allItems.filter((item) => item.name.toLowerCase().includes(action.payload.toLowerCase())),
+        items: filterItemsByName(state.allItems, action.payload),
       };
     default:
       return state;
