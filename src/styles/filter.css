@@ -279,10 +279,3 @@ div {
   color: white;
   text-decoration: none;
 }
-
-@media only screen and (max-width: 768px) {
-  .loading-image {
-    transform: scale(1.1);
-    transform-origin: center center;
-  }
-}

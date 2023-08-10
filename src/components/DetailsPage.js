@@ -6,6 +6,7 @@ import { FiSettings, FiChevronLeft } from 'react-icons/fi';
 import { FaBell } from 'react-icons/fa';
 import { fetchCoordinates } from '../actions';
 import loadingImage from '../assets/banner-apurity-readme.PNG';
+import mobileLoadingImage from '../assets/apurity-loading-mobile-banmer.PNG';
 import airPurityIcon from '../assets/air-purity.PNG';
 import statesImages from '../data/mexico.json';
 
@@ -44,7 +45,9 @@ const DetailsPage = ({
     fetchCoordinates(stateName);
   }, [stateName, fetchCoordinates]);
 
-  if (loading) return <div><img className="loading-image" src={loadingImage} alt="Loading..." /></div>;
+  const isMobile = window.innerWidth <= 768;
+
+  if (loading) return <div><img className="loading-image" src={isMobile ? mobileLoadingImage : loadingImage} alt="Loading..." /></div>;
 
   if (error) {
     return (
