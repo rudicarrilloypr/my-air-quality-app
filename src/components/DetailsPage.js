@@ -1,4 +1,3 @@
-// src/components/DetailsPage.js
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -16,6 +15,21 @@ const determineAirQuality = (aqi) => {
     return 'intermediate';
   }
   return 'bad';
+};
+
+const getWikipediaLink = (key) => {
+  switch (key) {
+    case 'AQI': return 'https://en.wikipedia.org/wiki/Air_quality_index';
+    case 'CO': return 'https://en.wikipedia.org/wiki/Carbon_monoxide';
+    case 'NO': return 'https://en.wikipedia.org/wiki/Nitric_oxide';
+    case 'NO2': return 'https://en.wikipedia.org/wiki/Nitrogen_dioxide';
+    case 'O3': return 'https://en.wikipedia.org/wiki/Ozone';
+    case 'SO2': return 'https://en.wikipedia.org/wiki/Sulfur_dioxide';
+    case 'PM2.5': return 'https://en.wikipedia.org/wiki/Particulates#PM2.5';
+    case 'PM10': return 'https://en.wikipedia.org/wiki/Particulates#PM10';
+    case 'NH3': return 'https://en.wikipedia.org/wiki/Ammonia';
+    default: return '';
+  }
 };
 
 const DetailsPage = ({
@@ -69,7 +83,6 @@ const DetailsPage = ({
         <h2 className="quality-header">
           AIR QUALITY
         </h2>
-        {/* Si hay datos de calidad del aire, mostramos el indicador */}
         {data.length > 0 && (
           <span className={`quality-indicator ${determineAirQuality(data[0].main.aqi)}`} title={determineAirQuality(data[0].main.aqi)} />
         )}
@@ -78,11 +91,11 @@ const DetailsPage = ({
         <table key={item.dt} className="table air-quality-list">
           <tbody>
             <tr>
-              <th>AQI</th>
+              <th><a href={getWikipediaLink('AQI')} target="_blank" rel="noopener noreferrer">AQI</a></th>
               <td>{item.main.aqi}</td>
             </tr>
             <tr>
-              <th>CO</th>
+              <th><a href={getWikipediaLink('CO')} target="_blank" rel="noopener noreferrer">CO</a></th>
               <td>
                 {item.components.co}
                 {' '}
@@ -90,7 +103,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>NO</th>
+              <th><a href={getWikipediaLink('NO')} target="_blank" rel="noopener noreferrer">NO</a></th>
               <td>
                 {item.components.no}
                 {' '}
@@ -98,7 +111,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>NO2</th>
+              <th><a href={getWikipediaLink('NO2')} target="_blank" rel="noopener noreferrer">NO2</a></th>
               <td>
                 {item.components.no2}
                 {' '}
@@ -106,7 +119,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>O3</th>
+              <th><a href={getWikipediaLink('O3')} target="_blank" rel="noopener noreferrer">O3</a></th>
               <td>
                 {item.components.o3}
                 {' '}
@@ -114,7 +127,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>SO2</th>
+              <th><a href={getWikipediaLink('SO2')} target="_blank" rel="noopener noreferrer">SO2</a></th>
               <td>
                 {item.components.so2}
                 {' '}
@@ -122,7 +135,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>PM2.5</th>
+              <th><a href={getWikipediaLink('PM2.5')} target="_blank" rel="noopener noreferrer">PM2.5</a></th>
               <td>
                 {item.components.pm2_5}
                 {' '}
@@ -130,7 +143,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>PM10</th>
+              <th><a href={getWikipediaLink('PM10')} target="_blank" rel="noopener noreferrer">PM10</a></th>
               <td>
                 {item.components.pm10}
                 {' '}
@@ -138,7 +151,7 @@ const DetailsPage = ({
               </td>
             </tr>
             <tr>
-              <th>NH3</th>
+              <th><a href={getWikipediaLink('NH3')} target="_blank" rel="noopener noreferrer">NH3</a></th>
               <td>
                 {item.components.nh3}
                 {' '}

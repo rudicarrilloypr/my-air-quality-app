@@ -267,3 +267,8 @@ div {
 .bad {
   background-color: rgb(210, 0, 0);
 }
+
+.table th a {
+  color: white;
+  text-decoration: none;  /* Optional: If you want to remove the underlining of the links */
+}
