@@ -277,7 +277,7 @@ div {
 
 .table th a {
   color: white;
-  text-decoration: none;  /* Optional: If you want to remove the underlining of the links */
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
