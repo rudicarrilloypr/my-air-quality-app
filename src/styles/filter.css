@@ -279,3 +279,10 @@ div {
   color: white;
   text-decoration: none;  /* Optional: If you want to remove the underlining of the links */
 }
+
+@media only screen and (max-width: 768px) {
+  .loading-image {
+    transform: scale(1.1);
+    transform-origin: center center;
+  }
+}
