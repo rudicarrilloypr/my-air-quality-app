@@ -40,7 +40,7 @@
 
 # 📖  Air Purity App <a name="about-project"></a>
 
-**Air Purity Mx** mobile web application to check and provide Mexico's current air pollution quality and beautiful pictures of iconic Mexico places, coming from AirWeather and Unsplash API.
+**Air Purity Mx** mobile web application to check and provide Mexico's current air pollution quality and beautiful pictures of iconic Mexico places, coming from OpenWeather and Unsplash API.
 
 ## 🛠 Built With <a name="built-with"></a>
 - React APP
