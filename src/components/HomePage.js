@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Filter from './Filter';
 import { fetchCoordinates, selectState } from '../actions';
+import loadingImage from '../assets/banner-apurity-readme.PNG';
 
 const HomePage = ({
   items, loading, error, fetchCoordinates, selectState,
 }) => {
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div><img className="loading-image" src={loadingImage} alt="Loading..." /></div>;
+
   if (error) {
     return (
       <div>

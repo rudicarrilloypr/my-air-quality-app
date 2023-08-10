@@ -3,6 +3,13 @@ div {
   position: relative;
 }
 
+.loading-image {
+  width: 100%;
+  height: auto; /* mantiene la relación de aspecto de la imagen */
+  max-width: 100%; /* para asegurarse de que la imagen no exceda el ancho del contenedor */
+  display: block; /* para eliminar el espacio extra en la parte inferior de la imagen */
+}
+
 .nav-bar {
   height: 30px;
   background-color: #385898;

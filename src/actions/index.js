@@ -41,8 +41,8 @@ export const applyFilter = (filter) => ({
 
 export const fetchItems = (lat, lon) => (dispatch) => {
   if (lat == null || lon == null) {
-    dispatch(fetchItemsFailure('Latitud o longitud no definidas.'));
-    return Promise.reject(new Error('Latitud o longitud no definidas.'));
+    dispatch(fetchItemsFailure('lat or long not defined.'));
+    return Promise.reject(new Error('lat or long not defined.'));
   }
   dispatch(fetchItemsRequest());
   return axios
@@ -82,8 +82,8 @@ export const fetchCoordinates = (locationName) => (dispatch) => {
         dispatch(fetchCoordinatesSuccess(coordinates));
         return dispatch(fetchItems(coordinates.lat, coordinates.lon));
       }
-      dispatch(fetchCoordinatesFailure('No se encontraron coordenadas'));
-      throw new Error('No se encontraron coordenadas');
+      dispatch(fetchCoordinatesFailure('coordinates not found.'));
+      throw new Error('coordinates not found.');
     })
     .catch((error) => {
       dispatch(fetchCoordinatesFailure(error.message));
